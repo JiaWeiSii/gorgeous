@@ -1,0 +1,8 @@
+transformers
+safetensors
+accelerator
+gradio==3.41.0
+diffusers==0.25.0
+huggingface_hub==0.25.0
+dreamsim
+opencv-python

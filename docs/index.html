@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>&#128132;Gorgeous&#128161;</title>
+
+    <meta name="description" content="Gorgeous: Creating Narrative-Driven Makeup Ideas via Image Prompt">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128038;</text></svg>">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+    <link rel="stylesheet" href="./css/dics.min.css">
+    <script src="./js/dics.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', domReady);
+        function domReady() {
+            for (const e of document.querySelectorAll(".b-dics")) {
+                new Dics({
+                    container: e,
+                    textPosition: "top"
+                });
+            }
+        }
+        $(document).ready(function () {
+            $(".theme-tab").click(function (e) {
+                e.preventDefault();
+                var target = $(this).data("target");
+                $(".tab-pane").removeClass("active");
+                $(target).addClass("active");
+                $(".theme-tab").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $('.slider-pair').each(function () {
+                var container = $(this);
+                var afterImage = container.find('.after-image');
+                var range = $('<input type="range" min="0" max="100" value="100" dir="rtl">');
+                container.append(range);
+                range.on('input', function () {
+                    var val = $(this).val();
+                    afterImage.css('clip-path', 'inset(0 ' + val + '% 0 0)');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                &#128132;<b>Gorgeous</b>: Creating Narrative-Driven Makeup Ideas via Image Prompt &#128161;</br>
+                <!--                 <small>
+                    arXiv
+                </small> -->
+                <img src="https://badges.toozhao.com/badges/01JPHRY1HKX3R65YWCQV6HHAX4/green.svg" />
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://scholar.google.com.my/citations?user=8z00Mb8AAAAJ&hl=en">
+                            Jia Wei Sii<sup>1</sup>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://cs-chan.com/">
+                            Chee Seng Chan<sup>1</sup>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li>
+                        Universiti Malaya<sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://arxiv.org/pdf/2404.13944">
+                            <!--                             <image src="/assets/img/merf/paper.png" height="120px"> -->
+                            <h4><strong>Paper</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://arxiv.org/pdf/2404.13944">
+                            <!--                             <image src="/assets/img/merf/paper.png" height="120px"> -->
+                            <h4><i class="ai ai-arxiv"></i> <strong>Arxiv</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/JiaWeiSii/gorgeous">
+                            <!--                             <image src="/assets/img/merf/github_pad.png" height="120px"> -->
+                            <h4><strong>Code</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row-main">
+            <div class="col-md-12">
+                <img src="assets/teaser.png" style="width:100%;" class="img-responsive center-block" alt="overview"><br>
+                <p class="text-justify">Figure 1: Provide any image prompts, whether a serene landscape or a dynamic scene, \( \textbf{Gorgeous} \) will
+                    transform your narrative into creative makeup ideas, perfect for moments when you’re unsure how
+                    to convey meaning through makeup.</p>
+            </div>
+        </div>
+
+        <!--         <div class="row">
+            <div class="col-md-8 col-md-offset-1">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/watch?v=VM4xXJRcxwU" allowfullscreen
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="row-main">
+            <div class="col-md-12">
+                <h3>
+                    <b>Abstract</b>
+                </h3>
+                <p class="text-justify">
+                    Introducing \( \textbf{Gorgeous} \), a diffusion-based generative method that revolutionizes
+                    the makeup industry by empowering user creativity via image prompts. Unlike
+                    traditional makeup transfer methods that focus on replicating existing make-
+                    ups, Gorgeous, for the first time, empowers users to integrate narrative elements
+                    into makeup ideation using image prompts. The result is a makeup concept
+                    that vividly reflects user’s expression via images, offering imaginative makeup
+                    ideas for physical makeup applications. To achieve this, Gorgeous establishes a
+                    foundational framework, ensuring the model learns “what makeup is” before inte-
+                    grating narrative elements. A pseudo-pairing strategy, utilizing a face parsing and
+                    content-style disentangling network, addresses unpaired data challenges, enabling
+                    the model to do makeup training on bare faces. Users can input images repre-
+                    senting their ideas (e.g., fire), from which Gorgeous extracts context embeddings
+                    to guide our proposed makeup inpainting algorithm, conceptualizing creative,
+                    narrative-driven makeup ideas for targeted facial regions. Comprehensive exper-
+                    iments underscore the effectiveness of Gorgeous, paving a way for a
+                    new dimension in digital makeup artistry and application!
+                </p>
+            </div>
+        </div>
+
+        <div class="row-main">
+            <div class="col-md-12">
+                <h3>
+                    <b>Methodology</b>
+                </h3>
+                <br>
+                <img src="assets/overall.png" style="width:100%;" class="img-responsive center-block" alt="overview">
+                <br>
+                <p class="text-justify">
+                    Overall architecture of our \( \textbf{Gorgeous} \). Given a set of image prompts, these images
+                    are first processed to extract key narrative elements, which are embedded into a placeholder
+                    token. This token guides \( MaIP \) to generate makeup ideas for user. However, \( MaIP \)
+                    initially struggles to produce makeup-specific outputs, treating target regions as generic holes 
+                    due to inpainting limitations. To address this, \( MaFor \) ensures the output is makeup-like by: (i) learning “what makeup is”
+                    as a pretrained model to be used in \( MaIP \) during inference, and (ii) transforming narrative tokens
+                    into makeup-specific representations during inference. This process refines \( MaIP \)’s inpainting to apply
+                    narrative-inspired makeup ideas to targeted facial regions, retaining both the essence of makeup and
+                    the user’s narrative image inputs.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="container" id="main">
+            <div class="row-main">
+                <div class="col-md-12">
+                    <h3>
+                        <b>More Results</b>
+                    </h3>
+                    <div class="grid-container">
+                        <div class="grid-item"><img src="assets/cls/1-fire.png" alt="Image 3"></div>
+                        <div class="grid-item"><img src="assets/cls/8-art.png" alt="Image 8"></div>
+                        <div class="grid-item"><img src="assets/cls/6-war.png" alt="Image 6"></div>
+                        <div class="grid-item"><img src="assets/cls/4-purple.png" alt="Image 4"></div>
+                        <div class="grid-item"><img src="assets/cls/8-soil.png" alt="Image 9"></div>
+                        <div class="grid-item"><img src="assets/cls/5-artstained.png" alt="Image 5"></div>
+                        <div class="grid-item"><img src="assets/cls/0-tiger.png" alt="Image 1"></div>
+                        <div class="grid-item"><img src="assets/cls/9-general.png" alt="Image 10"></div> 
+                        <div class="grid-item"><img src="assets/cls/00-mooncake.png" alt="Image 2"></div>
+                        <div class="grid-item"><img src="assets/cls/7-ice.png" alt="Image 7"></div>
+<!--                        <div class="grid-item"><img src="assets/cls/7-ice.png" alt="Image 7"></div>-->
+<!--                        <div class="grid-item"><img src="assets/cls/7-ice.png" alt="Image 7"></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-main">
+            <div class="col-md-12">
+                <div class="cta-section">
+                    <h2>Want to try Gorgeous on your own face?</h2>
+                    <p>Download the code and run it locally with your own images. It's open source and easy to get started!</p>
+                    <a href="https://github.com/JiaWeiSii/gorgeous" class="btn btn-primary" target="_blank">
+                        <i class="fa fa-github"></i> Try It on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-cite">
+            <div class="col-md-12">
+                <h3>
+                    <b>Citation</b>
+                </h3>
+                <pre><code>@misc{sii2024gorgeouscreatedesiredcharacter,
+                    title={Gorgeous: Create Your Desired Character Facial Makeup from Any Ideas}, 
+                    author={Jia Wei Sii and Chee Seng Chan},
+                    year={2024},
+                    eprint={2404.13944},
+                    archivePrefix={arXiv},
+                    primaryClass={cs.CV},
+                    url={https://arxiv.org/abs/2404.13944}, 
+              }</code></pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
