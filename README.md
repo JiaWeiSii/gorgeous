@@ -11,7 +11,7 @@ Environment Setup:
 
 Context Learning:
 1. bash train_textualinversion.sh `<dataset_name>` `<initializer_token>`
-2. `<dataset_name>` see "makeup_assets/`<dataset_name>`"
+2. `<dataset_name>` see "makeup_assets/`<dataset_name>`" These are few examples of makeup ideas we trained for research purpose.
 3. Note that the dataset in `makeup_assets` is for research purpose only.
 
 Gradio:
