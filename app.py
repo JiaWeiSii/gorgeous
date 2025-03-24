@@ -223,6 +223,7 @@ image_sets = [
 labels = [image_set["label"] for image_set in image_sets]
 
 def display_images(set_label):
+    print("?")
     set_index = int(set_label.split(":")[0].replace("Set ", "")) - 1  # start from 1
     image_set = image_sets[set_index]
     return [image_set["label"]] + image_set["images"]
@@ -268,14 +269,29 @@ with block:
     gr.Markdown(
         """
         <div class="title-background">
-            <h1 style='font-weight: 10px; font-size: 40px;'>GORGEOUS</h1>
+            <h1 style='font-weight: 10px; font-size: 40px;'>&#128132;<b>Gorgeous</b>: Creating Narrative-Driven Makeup Ideas via Image Prompt &#128161;</h1>
         </div>
         """
     )
     # Description with center alignment
     gr.Markdown(
         """
-        <div class="content-description">Gorgeous is a novel diffusion-based makeup application method that goes beyond simple transfer by innovatively crafting unique and thematic facial makeup. It draws artistic inspiration from a minimal set of three to five images and transforms these elements into practical makeup applications directly on the face. It can effectively generate distinctive character facial makeup inspired by the chosen thematic reference images. <br>This approach opens up new possibilities for integrating broader story elements into character makeup, thereby enhancing the narrative depth and visual impact in storytelling.</div>
+        <div class="content-description">Introducing \( \textbf{Gorgeous} \), a diffusion-based generative method that revolutionizes
+                    the makeup industry by empowering user creativity via image prompts. Unlike
+                    traditional makeup transfer methods that focus on replicating existing make-
+                    ups, Gorgeous, for the first time, empowers users to integrate narrative elements
+                    into makeup ideation using image prompts. The result is a makeup concept
+                    that vividly reflects user’s expression via images, offering imaginative makeup
+                    ideas for physical makeup applications. To achieve this, Gorgeous establishes a
+                    foundational framework, ensuring the model learns “what makeup is” before inte-
+                    grating narrative elements. A pseudo-pairing strategy, utilizing a face parsing and
+                    content-style disentangling network, addresses unpaired data challenges, enabling
+                    the model to do makeup training on bare faces. Users can input images repre-
+                    senting their ideas (e.g., fire), from which Gorgeous extracts context embeddings
+                    to guide our proposed makeup inpainting algorithm, conceptualizing creative,
+                    narrative-driven makeup ideas for targeted facial regions. Comprehensive exper-
+                    iments underscore the effectiveness of Gorgeous, paving a way for a
+                    new dimension in digital makeup artistry and application!</div>
         """
     )
 
@@ -284,11 +300,11 @@ with block:
             with gr.Column():
                 with gr.Row():
                     image_pil = gr.Image(
-                        label="Targeted face (e.g., your face)", type="pil"
-                    ).style(height=256)
+                        label="Targeted face (e.g., your face)", type="pil", height=256
+                    )
                     generated_image = gr.Image(
-                        label="Generated Image", type="pil"
-                    ).style(height=256)
+                        label="Generated Image", type="pil", height=256
+                    )
 
                 with gr.Row():
                     set_dropdown = gr.Dropdown(
@@ -376,4 +392,5 @@ with block:
 
     gr.Markdown("### Article")
 
-block.launch(share=True)
+
+block.launch(debug=True)

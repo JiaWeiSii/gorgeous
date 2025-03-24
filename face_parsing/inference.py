@@ -48,32 +48,34 @@ def vis_parsing_maps(im, parsing_anno, stride):
         vis_parsing_anno_color[index[0], index[1], :] = part_colors[pi]
 
     vis_parsing_anno_color = vis_parsing_anno_color.astype(np.uint8)
-    vis_parsing_anno_color = Image.fromarray(vis_parsing_anno_color) 
-    
+    vis_parsing_anno_color = Image.fromarray(vis_parsing_anno_color)
+
     return vis_parsing_anno_color
 
 def get_face_mask(pil_img):
     global net
-    
+
     if net is None:
         n_classes = 19
         net = BiSeNet(n_classes=n_classes)
-        net.cuda()
-        net.load_state_dict(torch.load(CHECKPOINT))
+        if torch.cuda.is_available():
+            net.cuda()
+        net.load_state_dict(torch.load(CHECKPOINT, map_location='cpu'))
         net.eval()
 
     to_tensor = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
     ])
-    
+
     with torch.no_grad():
         origw, origh = pil_img.size
-        
+
         image = pil_img.resize((512, 512), Image.BILINEAR)
         img = to_tensor(image)
         img = torch.unsqueeze(img, 0)
-        img = img.cuda()
+        if torch.cuda.is_available():
+            img = img.cuda()
         out = net(img)[0]
         parsing = out.squeeze(0).cpu().numpy().argmax(0)
         # print(parsing)
