@@ -1,4 +1,8 @@
-# Gorgeous: Creating Narrative-Driven Makeup Ideas via Image Prompt 
+# Gorgeous: Creating Narrative-Driven Makeup Ideas via Image Prompt (Official Site)
+
+Updated in May. 05, 2025 (Published at [Multimedia Tools and Applications, Springer](https://link.springer.com/article/10.1007/s11042-025-20874-3))
+
+Released on May 29, 2024
 
 ---
 
@@ -16,3 +20,27 @@ Context Learning:
 
 Gradio:
 1. python app.py
+
+## Citation
+
+```bibtex
+@article{sii2025gorgeous,
+  title={Gorgeous: Creating narrative-driven makeup ideas via image prompts},
+  author={Sii, Jia Wei and Chan, Chee Seng},
+  journal={Multimedia Tools and Applications},
+  pages={1-22},
+  year={2025},
+  publisher={Springer}
+}
+```
+
+## Feedback
+Suggestions and opinions on this work are greatly welcomed. Please contact the authors by sending an email to
+`adrianasjw at hotmail.com` or `cs.chan at um.edu.my`.
+
+## License and Copyright
+The project is open source under BSD-3 license (see the ``` LICENSE ``` file). 
+
+For commercial purpose usage, please contact Dr. Chee Seng Chan at `cs.chan at um.edu.my`
+
+&#169;2024 Universiti Malaya.
