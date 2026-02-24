@@ -2,7 +2,7 @@
 
 Updated on February 24, 2026
 
-Updated on May. 05, 2025 (Published at [Multimedia Tools and Applications, Springer](http://cs-chan.com/doc/MTAP2025.pdf))
+Updated on May 05, 2025 (Published at [Multimedia Tools and Applications, Springer](http://cs-chan.com/doc/MTAP2025.pdf))
 
 Released on February 20, 2025
 
