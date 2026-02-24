@@ -1,6 +1,6 @@
 # Gorgeous: Creating Narrative-Driven Makeup Ideas via Image Prompt (Official Site)
 
-Updated in May. 05, 2025 (Published at [Multimedia Tools and Applications, Springer](https://link.springer.com/article/10.1007/s11042-025-20874-3))
+Updated in May. 05, 2025 (Published at [Multimedia Tools and Applications, Springer](http://cs-chan.com/doc/MTAP2025.pdf))
 
 Released on February 20, 2025
 
