@@ -8,6 +8,12 @@ Released on February 20, 2025
 
 ![](docs/assets/teaser.png)
 
+## :rocket: Introduction
+Gorgeous is a diffusion-based makeup generator that turns any image prompt (like fire or moonlight) into creative, narrative-driven makeup on a face, rather than simply copying an existing style. It first learns what makeup is, then uses pseudo-paired training (via face parsing and content–style disentanglement) to learn from bare-face images, and finally applies a context-guided inpainting method to produce region-specific, real-world-ready makeup designs.
+  
+From inspiration to personalized beauty in seconds to unlock scalable, AI-powered creativity for brands, artists, and consumers.
+
+## :hammer_and_wrench: Getting Start
 Environment Setup:
 1. conda create -n gorgeous python=3.10
 2. conda activate gorgeous
